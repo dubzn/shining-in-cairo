@@ -1,15 +1,12 @@
 %lang starknet
 
+const WAITING_BOT_TURN = 'waiting_bot';
+const WAITING_PLAYER_TURN = 'waiting_player';
+const FINISHED = 'finished';
+
 struct Game {
-    id: felt,
     player_id: felt,
     scenario_id: felt,
-    game_status_id: felt,
+    game_status: felt,
 }
 
-struct GameStatus {
-    id: felt,
-    hero_position: felt,
-    enemy_position: felt,
-    game_state: felt,
-}
